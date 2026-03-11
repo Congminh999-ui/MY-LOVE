@@ -1,0 +1,146 @@
+/* ==============================
+   BIẾN MÀU TOÀN CỤC
+============================== */
+:root {
+  --do:        #cc0000;
+  --xanh-dam:  #1a5276;
+  --xanh-nhat: #2e86c1;
+  --nen:       #f4f6f8;
+}
+
+/* ==============================
+   CƠ BẢN
+============================== */
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: var(--nen);
+  font-size: 14px;
+}
+
+/* HEADER */
+.header-banner {
+  position: relative;
+  background-image: url('https://www.florachoisfharraige.ie/wp-content/uploads/2025/02/Veronica_Chamaedrys_04-FEATUREDWEBSITE.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 450px;
+  margin-bottom: 30px;
+}
+
+/* Nhóm 3 ảnh */
+.header-imgs {
+  display: flex;
+
+  gap: 6px;
+  align-items: flex-end;
+}
+
+/* Mỗi ảnh hình lục giác */
+.header-imgs img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  /* Tạo hình lục giác bằng clip-path */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Ảnh đầu và cuối nhỏ hơn, ảnh giữa to hơn — giống hình mẫu */
+.header-imgs img:nth-child(1) {
+  width: 140px;
+  height: 140px;
+  transform: translate(34px, -40px) rotate(15deg);  /* ← dịch chuyển ảnh 1 riêng: (ngang, dọc) */
+}
+.header-imgs img:nth-child(2) {
+  width: 140px;
+  height: 140px;
+  transform: translate(40px, -63px) rotate(15deg);   /* ← ảnh 2 */
+}
+.header-imgs img:nth-child(3) {
+  width: 140px;
+  height: 140px;
+  transform: translate(-149px, 71px) rotate(20deg); /* ← ảnh 3 */
+}
+/* Đẩy nội dung lên trên lớp mờ */
+
+.header-banner h1 { 
+    font-size: 35px; 
+    font-weight: 700; 
+    margin: 10px 6px; 
+}
+.header-banner p  { 
+    font-size: 20px; 
+    margin: 8px;
+}
+.khung-chu {
+   margin-top: -300px;
+}
+/* ==============================
+   NAVBAR
+============================== */
+.navbar { min-height: 42px; }
+.navbar-dark .navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 8px 16px;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+.navbar-dark .navbar-nav .nav-link:hover { background: rgba(255,255,255,0.15); }
+.author-text { color: rgba(255,255,255,0.8); font-size: 0.78rem; }
+
+/* ==============================
+   LAYOUT CHÍNH
+============================== */
+.main-wrapper { padding: 16px 0; }
+
+/* ==============================
+   SIDEBAR
+============================== */
+.sidebar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.sidebar-title {
+  background: #ff0000;
+  color: white;
+  font-weight: 700;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+.sidebar ul { list-style: none; padding: 8px 0; margin: 0; }
+.sidebar ul li a {
+  display: block;
+  padding: 5px 14px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+.sidebar ul li a::before { content: "• "; color: var(--xanh-nhat); }
+.sidebar ul li a:hover   { background: #eaf3fb; color: var(--xanh-dam); }
+
+/* ==============================
+   BẢNG SINH VIÊN
+============================== */
+
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background: var(--xanh-dam);
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.78rem;
+  margin-top: 24px;
+}
